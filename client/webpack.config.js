@@ -18,7 +18,7 @@ module.exports = () => {
 			// Webpack plugin that generates our html file and injects our bundles.
 			new HtmlWebpackPlugin({
 				template: "./index.html",
-				title: "Contact Cards",
+				title: "JATE",
 			}),
 
 			// Injects custom service worker
@@ -29,15 +29,15 @@ module.exports = () => {
 
 			// Creates a manifest.json file.
 			new WebpackPwaManifest({
-				fingerprints: false,
-				inject: true,
-				name: "Contact Cards",
-				short_name: "Contact",
-				description: "Never forget your contacts!",
-				background_color: "#225ca3",
-				theme_color: "#225ca3",
+				filename: "manifest.json",
+				name: "Just Another Text Editor",
+				short_name: "JATE",
+				orientation: "portrait",
+				display: "standalone",
+				description: "Just Another Text Editor!",
 				start_url: "/",
 				publicPath: "/",
+				includeDirectory: true,
 				icons: [
 					{
 						src: path.resolve("src/images/logo.png"),
