@@ -29,6 +29,8 @@ module.exports = () => {
 
 			// Creates a manifest.json file.
 			new WebpackPwaManifest({
+				fingerprints: false,
+				inject: true,
 				filename: "manifest.json",
 				name: "Just Another Text Editor",
 				short_name: "JATE",
